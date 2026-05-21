@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercici 3.2 - Flexió gramatical</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 24px;
+      background: #f7f7f7;
+      color: #222;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 28px;
+      border-radius: 14px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 1.8rem;
+    }
+
+    .intro {
+      margin-bottom: 20px;
+      color: #444;
+    }
+
+    .example {
+      background: #f1f4f8;
+      border-left: 4px solid #1f4e79;
+      padding: 12px 16px;
+      margin-bottom: 22px;
+      border-radius: 8px;
+    }
+
+    .item {
+      margin-bottom: 18px;
+    }
+
+    .item-number {
+      font-weight: bold;
+      margin-right: 4px;
+    }
+
+    input[type="text"] {
+      font-size: 1rem;
+      padding: 5px 8px;
+      margin: 0 3px;
+      border: 2px solid #bbb;
+      border-radius: 6px;
+      background: #fff;
+      min-width: 150px;
+    }
+
+    input.correct {
+      border-color: #2e7d32;
+      background: #e8f5e9;
+    }
+
+    input.incorrect {
+      border-color: #c62828;
+      background: #ffebee;
+    }
+
+    input.empty {
+      border-color: #bbb;
+      background: #fff;
+    }
+
+    .word {
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    .buttons {
+      margin-top: 24px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      font-size: 1rem;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #1f4e79;
+      color: white;
+    }
+
+    button.secondary {
+      background: #666;
+    }
+
+    #resultat {
+      margin-top: 18px;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    .font {
+      margin-top: 24px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Exercici 3.2</h1>
+
+    <p class="intro">
+      Ompliu els espais buits amb la forma adequada (noms, adjectius o verbs) a partir de la paraula que hi ha entre parèntesis. Tingueu en compte que es pot tractar de la mateixa paraula que es dona.
+    </p>
+
+    
+
+    <div class="example">
+      <strong>Exemple:</strong><br />
+      Cal que la Mercè <strong>reconegui</strong> <span class="word">(RECONÈIXER)</span> els seus errors.
+    </div>
+
+    <div class="item">
+      <span class="item-number">1.</span>
+      Organitzeu la conferència allà on vosaltres
+      <input type="text" data-answer="vulgueu" aria-label="Resposta 1" />
+      <span class="word">(voler)</span>, però, sobretot, convideu-hi els vostres professors i anuncieu-la amb prou antelació.
+    </div>
+
+    <div class="item">
+      <span class="item-number">2.</span>
+      El text d’Artur Bladé diu: «Ell duia l’escopeta i jo, el
+      <input type="text" data-answer="perdigot" aria-label="Resposta 2" />
+      <span class="word">(perdiu)</span> engabiat».
+    </div>
+
+    <div class="item">
+      <span class="item-number">3.</span>
+      Per poder començar la sessió de pràctiques, el metge va demanar a un estudiant que li apropés els
+      <input type="text" data-answer="bisturís" aria-label="Resposta 3" />
+      <span class="word">(bisturí)</span>.
+    </div>
+
+    <div class="item">
+      <span class="item-number">4.</span>
+      La llei de suport a l’emprenedor és força
+      <input type="text" data-answer="gasiva" aria-label="Resposta 4" />
+      <span class="word">(gasiu)</span> quant a incentius per a joves.
+    </div>
+
+    <div class="item">
+      <span class="item-number">5.</span>
+      El director els va dir: «Ei, nois, no us
+      <input type="text" data-answer="assegueu" aria-label="Resposta 5" />
+      <span class="word">(asseure’s)</span> als bancs que estan acabats de pintar!»
+    </div>
+
+    <div class="item">
+      <span class="item-number">6.</span>
+      Van fer el cicle de conferències sobre la poesia de Miquel Martí i Pol al Palau de Fires i
+      <input type="text" data-answer="Congressos" aria-label="Resposta 6" />
+      <span class="word">(congrés)</span>.
+    </div>
+
+    <div class="item">
+      <span class="item-number">7.</span>
+      Els
+      <input type="text" data-answer="annexos" aria-label="Resposta 7" />
+      <span class="word">(annex)</span> aporten materials complementaris o de suport que no s’han inclòs en el cos del treball per afavorir-ne la llegibilitat.
+    </div>
+
+    <div class="item">
+      <span class="item-number">8.</span>
+      No ens vam poder menjar el pastís, perquè tenia una cobertura feta amb ametlles
+      <input type="text" data-answer="amargants" aria-label="Resposta 8" />
+      <span class="word">(amargant)</span>.
+    </div>
+
+    <div class="buttons">
+      <button onclick="corregir()">Comprova</button>
+      <button class="secondary" onclick="reiniciar()">Reinicia</button>
+    </div>
+
+    <div id="resultat"></div>
+  </div>
+
+  <script>
+    function normalitzar(text) {
+      return text.trim().toLowerCase();
+    }
+
+    function corregir() {
+      const camps = document.querySelectorAll('input[type="text"]');
+      let correctes = 0;
+      let respostes = 0;
+
+      camps.forEach(camp => {
+        const respostaCorrecta = normalitzar(camp.dataset.answer);
+        const respostaUsuari = normalitzar(camp.value);
+
+        camp.classList.remove('correct', 'incorrect', 'empty');
+
+        if (respostaUsuari === '') {
+          camp.classList.add('empty');
+          return;
+        }
+
+        respostes++;
+
+        if (respostaUsuari === respostaCorrecta) {
+          camp.classList.add('correct');
+          correctes++;
+        } else {
+          camp.classList.add('incorrect');
+        }
+      });
+
+      const total = camps.length;
+      const resultat = document.getElementById('resultat');
+      resultat.textContent = `Has respost ${respostes} de ${total} preguntes. Respostes correctes: ${correctes}/${total}.`;
+    }
+
+    function reiniciar() {
+      const camps = document.querySelectorAll('input[type="text"]');
+      camps.forEach(camp => {
+        camp.value = '';
+        camp.classList.remove('correct', 'incorrect', 'empty');
+      });
+      document.getElementById('resultat').textContent = '';
+    }
+  </script>
+</body>
+</html>

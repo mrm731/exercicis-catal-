@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercici 3.5 - Expressions</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 24px;
+      background: #f7f7f7;
+      color: #222;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 28px;
+      border-radius: 14px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 1.8rem;
+    }
+
+    .intro {
+      margin-bottom: 20px;
+      color: #444;
+    }
+
+    .example {
+      background: #f1f4f8;
+      border-left: 4px solid #1f4e79;
+      padding: 12px 16px;
+      margin-bottom: 22px;
+      border-radius: 8px;
+    }
+
+    .bank {
+      background: #fafafa;
+      border: 1px solid #ddd;
+      padding: 16px;
+      border-radius: 10px;
+      margin-bottom: 24px;
+    }
+
+    .bank ul {
+      columns: 2;
+      margin: 8px 0 0 0;
+      padding-left: 22px;
+    }
+
+    .item {
+      margin-bottom: 18px;
+    }
+
+    .item-number {
+      font-weight: bold;
+      margin-right: 4px;
+    }
+
+    select {
+      font-size: 1rem;
+      padding: 4px 8px;
+      margin: 0 3px;
+      border: 2px solid #bbb;
+      border-radius: 6px;
+      background: #fff;
+      max-width: 100%;
+    }
+
+    select.correct {
+      border-color: #2e7d32;
+      background: #e8f5e9;
+    }
+
+    select.incorrect {
+      border-color: #c62828;
+      background: #ffebee;
+    }
+
+    .buttons {
+      margin-top: 24px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      font-size: 1rem;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #1f4e79;
+      color: white;
+    }
+
+    button.secondary {
+      background: #666;
+    }
+
+    #resultat {
+      margin-top: 18px;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+  
+    <p class="intro">
+      Trieu l’expressió adequada per completar el significat de cada frase. Tingueu en compte que hi ha dues expressions que no fareu servir.
+    </p>
+
+
+
+    <div class="example">
+      <strong>Exemple:</strong><br />
+      Vol aprendre a esquiar en una setmana perquè es pensa que això és <strong>bufar i fer ampolles</strong>.
+    </div>
+
+    <div class="bank">
+      <strong>Expressions:</strong>
+      <ul>
+        <li>estar dat i beneït</li>
+        <li>treballar a preu fet</li>
+        <li>fer-ne cinc cèntims</li>
+        <li>passar per alt</li>
+        <li>anar a mitges tintes</li>
+        <li>anar amb peus de plom</li>
+        <li>mossegar-se la llengua</li>
+        <li>posar-hi el coll</li>
+        <li>estar a l’aguait</li>
+        <li>arribar a misses dites</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <span class="item-number">1.</span>
+      Com que ell sempre va
+      <select data-answer="anar a mitges tintes" aria-label="Pregunta 1">
+        <option value="">— tria —</option>
+        <option>estar dat i beneït</option>
+        <option>treballar a preu fet</option>
+        <option>fer-ne cinc cèntims</option>
+        <option>passar per alt</option>
+        <option>anar a mitges tintes</option>
+        <option>anar amb peus de plom</option>
+        <option>mossegar-se la llengua</option>
+        <option>posar-hi el coll</option>
+        <option>estar a l’aguait</option>
+        <option>arribar a misses dites</option>
+      </select>
+      mai es va arribar a saber tota la veritat.
+    </div>
+
+    <div class="item">
+      <span class="item-number">2.</span>
+      Cal
+      <select data-answer="estar a l’aguait" aria-label="Pregunta 2">
+        <option value="">— tria —</option>
+        <option>estar dat i beneït</option>
+        <option>treballar a preu fet</option>
+        <option>fer-ne cinc cèntims</option>
+        <option>passar per alt</option>
+        <option>anar a mitges tintes</option>
+        <option>anar amb peus de plom</option>
+        <option>mossegar-se la llengua</option>
+        <option>posar-hi el coll</option>
+        <option>estar a l’aguait</option>
+        <option>arribar a misses dites</option>
+      </select>
+      per quan s’obri el període d’inscripció, perquè els cursos s’omplen de seguida.
+    </div>
+
+    <div class="item">
+      <span class="item-number">3.</span>
+      No es van atrevir a fer cap proposta nova perquè sobre aquella qüestió tot semblava
+      <select data-answer="estar dat i beneït" aria-label="Pregunta 3">
+        <option value="">— tria —</option>
+        <option>estar dat i beneït</option>
+        <option>treballar a preu fet</option>
+        <option>fer-ne cinc cèntims</option>
+        <option>passar per alt</option>
+        <option>anar a mitges tintes</option>
+        <option>anar amb peus de plom</option>
+        <option>mossegar-se la llengua</option>
+        <option>posar-hi el coll</option>
+        <option>estar a l’aguait</option>
+        <option>arribar a misses dites</option>
+      </select>.
+    </div>
+
+    <div class="item">
+      <span class="item-number">4.</span>
+      Cal
+      <select data-answer="anar amb peus de plom" aria-label="Pregunta 4">
+        <option value="">— tria —</option>
+        <option>estar dat i beneït</option>
+        <option>treballar a preu fet</option>
+        <option>fer-ne cinc cèntims</option>
+        <option>passar per alt</option>
+        <option>anar a mitges tintes</option>
+        <option>anar amb peus de plom</option>
+        <option>mossegar-se la llengua</option>
+        <option>posar-hi el coll</option>
+        <option>estar a l’aguait</option>
+        <option>arribar a misses dites</option>
+      </select>
+      i a poc a poc per no equivocar-se a l’hora de plantejar aquesta qüestió.
+    </div>
+
+    <div class="item">
+      <span class="item-number">5.</span>
+      Per a aquella gent que no va poder anar a la reunió caldrà dedicar els primers quinze minuts a
+      <select data-answer="fer-ne cinc cèntims" aria-label="Pregunta 5">
+        <option value="">— tria —</option>
+        <option>estar dat i beneït</option>
+        <option>treballar a preu fet</option>
+        <option>fer-ne cinc cèntims</option>
+        <option>passar per alt</option>
+        <option>anar a mitges tintes</option>
+        <option>anar amb peus de plom</option>
+        <option>mossegar-se la llengua</option>
+        <option>posar-hi el coll</option>
+        <option>estar a l’aguait</option>
+        <option>arribar a misses dites</option>
+      </select>.
+    </div>
+
+    <div class="item">
+      <span class="item-number">6.</span>
+      Va dir que no havia vingut a la reunió perquè se n’havia oblidat; li va
+      <select data-answer="passar per alt" aria-label="Pregunta 6">
+        <option value="">— tria —</option>
+        <option>estar dat i beneït</option>
+        <option>treballar a preu fet</option>
+        <option>fer-ne cinc cèntims</option>
+        <option>passar per alt</option>
+        <option>anar a mitges tintes</option>
+        <option>anar amb peus de plom</option>
+        <option>mossegar-se la llengua</option>
+        <option>posar-hi el coll</option>
+        <option>estar a l’aguait</option>
+        <option>arribar a misses dites</option>
+      </select>.
+    </div>
+
+    <div class="item">
+      <span class="item-number">7.</span>
+      Quan li van dir que no havia treballat prou va haver de
+      <select data-answer="mossegar-se la llengua" aria-label="Pregunta 7">
+        <option value="">— tria —</option>
+        <option>estar dat i beneït</option>
+        <option>treballar a preu fet</option>
+        <option>fer-ne cinc cèntims</option>
+        <option>passar per alt</option>
+        <option>anar a mitges tintes</option>
+        <option>anar amb peus de plom</option>
+        <option>mossegar-se la llengua</option>
+        <option>posar-hi el coll</option>
+        <option>estar a l’aguait</option>
+        <option>arribar a misses dites</option>
+      </select>.
+    </div>
+
+    <div class="item">
+      <span class="item-number">8.</span>
+      Va ser el membre de l’equip que més va
+      <select data-answer="posar-hi el coll" aria-label="Pregunta 8">
+        <option value="">— tria —</option>
+        <option>estar dat i beneït</option>
+        <option>treballar a preu fet</option>
+        <option>fer-ne cinc cèntims</option>
+        <option>passar per alt</option>
+        <option>anar a mitges tintes</option>
+        <option>anar amb peus de plom</option>
+        <option>mossegar-se la llengua</option>
+        <option>posar-hi el coll</option>
+        <option>estar a l’aguait</option>
+        <option>arribar a misses dites</option>
+      </select>,
+      perquè el projecte tirés endavant.
+    </div>
+
+    <div class="buttons">
+      <button onclick="corregir()">Comprova</button>
+      <button class="secondary" onclick="reiniciar()">Reinicia</button>
+    </div>
+
+    <div id="resultat"></div>
+  </div>
+
+  <script>
+    function corregir() {
+      const desplegables = document.querySelectorAll('select');
+      let correctes = 0;
+      let respostes = 0;
+
+      desplegables.forEach(select => {
+        const respostaCorrecta = select.dataset.answer;
+        const respostaUsuari = select.value;
+
+        select.classList.remove('correct', 'incorrect');
+
+        if (respostaUsuari !== '') {
+          respostes++;
+        }
+
+        if (respostaUsuari === respostaCorrecta) {
+          select.classList.add('correct');
+          correctes++;
+        } else {
+          select.classList.add('incorrect');
+        }
+      });
+
+      const total = desplegables.length;
+      const resultat = document.getElementById('resultat');
+
+      if (respostes < total) {
+        resultat.textContent = `Has respost ${respostes} de ${total} preguntes. Resultat provisional: ${correctes}/${total}.`;
+      } else {
+        resultat.textContent = `Resultat final: ${correctes}/${total}.`;
+      }
+    }
+
+    function reiniciar() {
+      const desplegables = document.querySelectorAll('select');
+      desplegables.forEach(select => {
+        select.value = '';
+        select.classList.remove('correct', 'incorrect');
+      });
+      document.getElementById('resultat').textContent = '';
+    }
+  </script>
+</body>
+</html>

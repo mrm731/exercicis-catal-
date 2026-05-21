@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Els valors del paisatge</title>
+  <title>Exercici 1 - Els valors del paisatge</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -28,6 +28,11 @@
       font-size: 1.8rem;
     }
 
+    .intro {
+      margin-bottom: 20px;
+      color: #444;
+    }
+
     select {
       font-size: 1rem;
       padding: 4px 8px;
@@ -45,6 +50,12 @@
     select.incorrect {
       border-color: #c62828;
       background: #ffebee;
+    }
+
+    .blank-number {
+      font-size: 0.85rem;
+      color: #555;
+      margin-right: 2px;
     }
 
     .buttons {
@@ -83,15 +94,26 @@
 </head>
 <body>
   <div class="container">
-    <h1>Els valors del paisatge</h1>
+    <h1>Exercici 1</h1>
 
+    <p class="intro">Trieu l’opció correcta en cada desplegable i cliqueu <strong>Comprova</strong> per comprovar les respostes.</p>
+
+    <h2>Els valors del paisatge</h2>
     <p>
       El paisatge d’Olot és eminentment forestal i gaudeix de dues grans masses
-      boscoses gairebé contínues. L’element cabdal dels valors naturals i ecològics
-      l’aporta el vulcanisme de la zona, que ha llegat testimonis excepcionals que no es
-      repeteixen a la península Ibèrica. Aquest fet va afavorir que
+      boscoses <span class="blank-number">(0)</span>
+      <select data-answer="gairebé" aria-label="Pregunta 0">
+        <option value="">— tria —</option>
+        <option>gaire bé</option>
+        <option>gairebé</option>
+        <option>quasi bé</option>
+      </select>
+      contínues. L’element cabdal dels valors naturals i ecològics l’aporta el vulcanisme
+      de la zona, que ha llegat testimonis excepcionals que no es repeteixen a la península
+      Ibèrica. Aquest fet va afavorir que
 
-      <select data-answer="l’any">
+      <span class="blank-number">(1)</span>
+      <select data-answer="l’any" aria-label="Pregunta 1">
         <option value="">— tria —</option>
         <option>a l’any</option>
         <option>al</option>
@@ -99,7 +121,8 @@
       </select>
       1982 la Generalitat de Catalunya
 
-      <select data-answer="declarés">
+      <span class="blank-number">(2)</span>
+      <select data-answer="declarés" aria-label="Pregunta 2">
         <option value="">— tria —</option>
         <option>declarés</option>
         <option>declari</option>
@@ -107,7 +130,8 @@
       </select>
       parc natural la zona volcànica de la Garrotxa. El paisatge
 
-      <select data-answer="de les valls">
+      <span class="blank-number">(3)</span>
+      <select data-answer="de les valls" aria-label="Pregunta 3">
         <option value="">— tria —</option>
         <option>de les pendents</option>
         <option>de les valls</option>
@@ -115,7 +139,8 @@
       </select>
       d’Olot ha servit
 
-      <select data-answer="com a">
+      <span class="blank-number">(4)</span>
+      <select data-answer="com a" aria-label="Pregunta 4">
         <option value="">— tria —</option>
         <option>com</option>
         <option>com a</option>
@@ -123,7 +148,8 @@
       </select>
       font d’inspiració per a l’obra de
 
-      <select data-answer="diversos">
+      <span class="blank-number">(5)</span>
+      <select data-answer="diversos" aria-label="Pregunta 5">
         <option value="">— tria —</option>
         <option>diversos</option>
         <option>experts</option>
@@ -132,7 +158,8 @@
       pintors i literats. El paisatge volcànic format per cràters, colades basàltiques
       o gredes també ha estat font d’inspiració de mites i llegendes fantasioses,
 
-      <select data-answer="fins i tot">
+      <span class="blank-number">(6)</span>
+      <select data-answer="fins i tot" aria-label="Pregunta 6">
         <option value="">— tria —</option>
         <option>fins i tot</option>
         <option>inclòs</option>
@@ -140,7 +167,8 @@
       </select>
       sobrenaturals, que s’han transmès oralment, generació
 
-      <select data-answer="rere">
+      <span class="blank-number">(7)</span>
+      <select data-answer="rere" aria-label="Pregunta 7">
         <option value="">— tria —</option>
         <option>darrera</option>
         <option>enrere</option>
@@ -150,25 +178,28 @@
     </p>
 
     <p>
-      <select data-answer="Cal">
+      <span class="blank-number">(8)</span>
+      <select data-answer="Cal" aria-label="Pregunta 8">
         <option value="">— tria —</option>
-        <option>∅</option>
+        <option>--</option>
         <option>Cal</option>
         <option>Cal que</option>
       </select>
       esmentar també les potencialitats ecològiques del riu Fluvià, el curs alt
 
-      <select data-answer="del qual">
+      <span class="blank-number">(9)</span>
+      <select data-answer="del qual" aria-label="Pregunta 9">
         <option value="">— tria —</option>
         <option>del qual</option>
         <option>del que</option>
         <option>pel qual</option>
       </select>
-      recorre el voltant d’Olot. L’interès d’aquest eix ecològic és divers.
-      D’altra banda, és l’únic gran riu de Catalunya que no presenta, en el seu recorregut,
-      cap gran embassament,
+      recorre el voltant d’Olot. L’interès d’aquest eix ecològic és divers. D’altra banda,
+      és l’únic gran riu de Catalunya que no presenta, en el seu recorregut, cap gran
+      embassament,
 
-      <select data-answer="cosa que">
+      <span class="blank-number">(10)</span>
+      <select data-answer="cosa que" aria-label="Pregunta 10">
         <option value="">— tria —</option>
         <option>cosa que</option>
         <option>el que</option>
@@ -177,16 +208,18 @@
       facilita el seu paper de connector ecològic. A més, la funció connectora va molt
       més enllà
 
-      <select data-answer="per tal com">
+      <span class="blank-number">(11)</span>
+      <select data-answer="per tal com" aria-label="Pregunta 11">
         <option value="">— tria —</option>
         <option>per a què</option>
         <option>per què</option>
         <option>per tal com</option>
       </select>
-      el riu recorre, també, el nord del Pla de l’Estany i la plana empordanesa,
-      i posa en contacte els espais muntanyencs i forestals
+      el riu recorre, també, el nord del Pla de l’Estany i la plana empordanesa, i posa
+      en contacte els espais muntanyencs i forestals
 
-      <select data-answer="de l’">
+      <span class="blank-number">(12)</span>
+      <select data-answer="de l’" aria-label="Pregunta 12">
         <option value="">— tria —</option>
         <option>de la</option>
         <option>de l’</option>
@@ -194,7 +227,7 @@
       </select>
       interior amb els espais litorals associats als Aiguamolls de l’Empordà.
     </p>
-
+    <p class="font">Font: «Valls d’Olot». <em>El Temps</em> (text adaptat)</p>
     <div class="buttons">
       <button onclick="corregir()">Comprova</button>
       <button class="secondary" onclick="reiniciar()">Reinicia</button>
@@ -202,7 +235,7 @@
 
     <div id="resultat"></div>
 
-    <p class="font">Font: «Valls d’Olot». <em>El Temps</em> (text adaptat)</p>
+
   </div>
 
   <script>
@@ -250,3 +283,4 @@
   </script>
 </body>
 </html>
+

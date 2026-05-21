@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercici 3.3 - Derivació</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 24px;
+      background: #f7f7f7;
+      color: #222;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 28px;
+      border-radius: 14px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 1.8rem;
+    }
+
+    .intro {
+      margin-bottom: 20px;
+      color: #444;
+    }
+
+    .example {
+      background: #f1f4f8;
+      border-left: 4px solid #1f4e79;
+      padding: 12px 16px;
+      margin-bottom: 22px;
+      border-radius: 8px;
+    }
+
+    input[type="text"] {
+      font-size: 1rem;
+      padding: 5px 8px;
+      margin: 0 3px;
+      border: 2px solid #bbb;
+      border-radius: 6px;
+      background: #fff;
+      min-width: 150px;
+    }
+
+    input.correct {
+      border-color: #2e7d32;
+      background: #e8f5e9;
+    }
+
+    input.incorrect {
+      border-color: #c62828;
+      background: #ffebee;
+    }
+
+    input.empty {
+      border-color: #bbb;
+      background: #fff;
+    }
+
+    .blank-number {
+      font-size: 0.85rem;
+      color: #555;
+      margin-right: 2px;
+    }
+
+    .word {
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    .buttons {
+      margin-top: 24px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      font-size: 1rem;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #1f4e79;
+      color: white;
+    }
+
+    button.secondary {
+      background: #666;
+    }
+
+    #resultat {
+      margin-top: 18px;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    .font {
+      margin-top: 24px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <p class="intro">
+      Ompliu els espais buits amb la forma corresponent derivada de la paraula que hi ha entre parèntesis. Assegureu-vos que encaixa en el text.
+    </p>
+
+  
+    <div class="example">
+      <strong>Exemple:</strong><br />
+      A la <strong>xocolateria</strong> <span class="word">(XOCOLATA)</span> Cacau Sampaka fan maridatges amb bombons.
+    </div>
+
+    <h2>Amb què bevem els bombons a l’estiu?</h2>
+
+    <p>
+      L’encarregat de la botiga Cacau Sampaka de Barcelona, Miquel Manzano, es planteja com complementar, dissimular, ampliar o
+
+      <span class="blank-number">(1)</span>
+      <input type="text" data-answer="matisar" aria-label="Resposta 1" />
+      <span class="word">(MATÍS)</span>
+
+      els gustos. «Si el cava és astringent i té un punt d’
+
+      <span class="blank-number">(2)</span>
+      <input type="text" data-answer="acidesa" aria-label="Resposta 2" />
+      <span class="word">(ÀCID)</span>,
+
+      llavors buscaria rebaixar-la amb la xocolata. Però amb el cava jo ni diria que és un maridatge, sinó un
+
+      <span class="blank-number">(3)</span>
+      <input type="text" data-answer="acompanyament" aria-label="Resposta 3" />
+      <span class="word">(COMPANY)</span>
+
+      de gustos.»
+    </p>
+
+    <p>
+      El bombó de violetes mostra tons
+
+      <span class="blank-number">(4)</span>
+      <input type="text" data-answer="florals" aria-label="Resposta 4" />
+      <span class="word">(FLOR)</span>
+
+      que, si van acompanyats amb carbònic, fan incrementar les aromes de la xocolata. En el bombó de pera i de vainilla, el cava fa aflorar les aromes volàtils i lleugeres de la fruita, i hi aporta
+
+      <span class="blank-number">(5)</span>
+      <input type="text" data-answer="frescor" aria-label="Resposta 5" />
+      <span class="word">(FRESC)</span>.
+    </p>
+
+    <p>
+      Un altre tast. Hem triat el vi de Glass de Gramona, amb un bombó de bergamota i pebre de Jamaica. El vi és dolç, però no és tan
+
+      <span class="blank-number">(6)</span>
+      <input type="text" data-answer="embafador|embafós" aria-label="Resposta 6" />
+      <span class="word">(EMBAFAR)</span>
+
+      i també és fresc.
+    </p>
+
+    <p>
+      Un maridatge habitual, bombó de trufa clàssica maridat amb rom. A la boca el rom és foc, però amb una textura
+
+      <span class="blank-number">(7)</span>
+      <input type="text" data-answer="sedosa" aria-label="Resposta 7" />
+      <span class="word">(SEDA)</span>
+
+      podria fer recordar molt el whisky.
+    </p>
+
+    <p>
+      Els maridatges de bombons amb cava, vi de Glass, rom i vermut es converteixen en una opció ideal per a l’estiu, que acostuma a relegar la xocolata a un segon terme per la
+
+      <span class="blank-number">(8)</span>
+      <input type="text" data-answer="fragilitat" aria-label="Resposta 8" />
+      <span class="word">(FRÀGIL)</span>
+
+      que té per resistir les altes temperatures.
+    </p>
+
+    <p class="font">Font: Ara.cat, Productes de la terra, 12 de juliol de 2015</p>
+
+    <div class="buttons">
+      <button onclick="corregir()">Comprova</button>
+      <button class="secondary" onclick="reiniciar()">Reinicia</button>
+    </div>
+
+    <div id="resultat"></div>
+  </div>
+
+  <script>
+    function normalitzar(text) {
+      return text.trim().toLowerCase();
+    }
+
+    function corregir() {
+      const camps = document.querySelectorAll('input[type="text"]');
+      let correctes = 0;
+      let respostes = 0;
+
+      camps.forEach(camp => {
+        const respostesCorrectes = camp.dataset.answer.split('|').map(normalitzar);
+        const respostaUsuari = normalitzar(camp.value);
+
+        camp.classList.remove('correct', 'incorrect', 'empty');
+
+        if (respostaUsuari === '') {
+          camp.classList.add('empty');
+          return;
+        }
+
+        respostes++;
+
+        if (respostesCorrectes.includes(respostaUsuari)) {
+          camp.classList.add('correct');
+          correctes++;
+        } else {
+          camp.classList.add('incorrect');
+        }
+      });
+
+      const total = camps.length;
+      const resultat = document.getElementById('resultat');
+      resultat.textContent = `Has respost ${respostes} de ${total} preguntes. Respostes correctes: ${correctes}/${total}.`;
+    }
+
+    function reiniciar() {
+      const camps = document.querySelectorAll('input[type="text"]');
+      camps.forEach(camp => {
+        camp.value = '';
+        camp.classList.remove('correct', 'incorrect', 'empty');
+      });
+      document.getElementById('resultat').textContent = '';
+    }
+  </script>
+</body>
+</html>
